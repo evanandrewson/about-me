@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guessing game</title>
+    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/guess.css">
 </head>
 <body>
     <header>
@@ -14,12 +16,19 @@
             <a href="guess.html">Guessing Game</a>
         </nav>
     </header>
-    <p>Rules</p>
-    <p>Tries left: <span id="tries-left">5</span></p>
-    <label>
-        Guess a number
-        <input type="number" id="number-Input">
-    </label>
+    <main>
+    <section class="game">
+        <p>Rules:</p>
+        <p>Guess a number between 1 and 20. You have 5 tries to guess the correct
+        number. The page will let you know if you've guessed too high or too low.
+        </p>
+        <p>Tries left: <span id="tries-left">5</span></p>
+        <label>
+            Guess a number
+            <input type="number" id="number-Input" min=1 max=20>
+        </label>
+    </section>
+    </main>
     <p></p>
 </body>
 </html>
