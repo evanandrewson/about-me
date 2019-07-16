@@ -26,9 +26,9 @@ quizButton.onclick = function() {
         numberCorrect ++;
     }
     alert('Quiz is complete, calculating results.');
-    let percentageCorrect = Math.round(numberCorrect/3 * 100);
+    let percentageCorrect = Math.round(numberCorrect / 3 * 100);
     result.classList.remove('hidden');
-    result.textContent = `You got ${numberCorrect} / 3 for a score of ${percentageCorrect}%.`;
+    result.textContent = `You got ${numberCorrect}/3 for a score of ${percentageCorrect}%.`;
     if(numberCorrect > 1) {
         happyFace.classList.remove('hidden');
         frownyFace.classList.add('hidden');
