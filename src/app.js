@@ -8,7 +8,7 @@ const frownyFace = document.getElementById('frowny-face');
 
 quizButton.onclick = function() {
     const name = prompt('What\'s your name?');
-    const confirmed = confirm(`${name}, are you sure you\'re ready for the quiz?`);
+    const confirmed = confirm(`${name}, are you sure you're ready for the quiz?`);
     if(confirmed === false) {
         return;
     }
@@ -28,7 +28,7 @@ quizButton.onclick = function() {
     alert('Quiz is complete, calculating results.');
     let percentageCorrect = Math.round(numberCorrect/3 * 100);
     result.classList.remove('hidden');
-    result.textContent = `You got ${numberCorrect}/3 for a score of ${percentageCorrect}%.`;
+    result.textContent = `You got ${numberCorrect}/ 3 for a score of ${percentageCorrect}%.`;
     if(numberCorrect > 1) {
         happyFace.classList.remove('hidden');
         frownyFace.classList.add('hidden');
