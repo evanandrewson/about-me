@@ -23,9 +23,15 @@
         number. The page will let you know if you've guessed too high or too low.
         </p>
         <p>Tries left: <span id="tries-left">5</span></p>
+        <p id="high" class="hidden">Too high!</p>
+        <p id="low" class="hidden">Too low!</p>
+        <p id="win" class="hidden">You win!</p>
+        <p id="lose" class="hidden">You lose.</p>
         <label>
             Guess a number
             <input type="number" id="number-Input" min=1 max=20>
+            <br>
+            <button id="guess-button">Submit</button>
         </label>
     </section>
     </main>
