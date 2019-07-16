@@ -74,7 +74,7 @@ ul, ol {
     display: none;
 }
 
-p, li {
+p, li, nav {
     font-family: 'Squada One', cursive;
     font-size: 25px;
 }
