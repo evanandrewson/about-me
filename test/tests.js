@@ -33,7 +33,7 @@ test('isNo test', function(assert) {
 test('isYes wrong answer test', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const text = "no";
+    const text = 'no';
     const expected = false;
 
     //Act 
@@ -47,7 +47,7 @@ test('isYes wrong answer test', function(assert) {
 test('isNo wrong answer test', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const text = "yes";
+    const text = 'yes';
     const expected = false;
 
     //Act 
