@@ -1,10 +1,10 @@
-function isYes(text) {
+function isNo(text) {
     text = text.toLowerCase();
-    if(text === 'yes' || text === 'y') {
+    if(text === 'no'  || text === 'n') {
         return true;
     } else {
         return false;
     }
 }
 
-export default isYes;
+export default isNo;
