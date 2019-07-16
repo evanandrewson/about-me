@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./src/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito|Squada+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img src="assets/rotated-portrait" alt="A picture of Evan">
     <header>
-        <img src="assets/rotated-portrait" alt="A picture of Evan">
         <h1>About Evan Andrewson</h1>
         <p class="intro">
             Evan is a hippie/nerd/bro/metalhead. Read on to learn more about him!
@@ -41,24 +42,25 @@
             </p>
         </section>
         <section class ="lists">
+            <h3 class="list-header">&nbsp;&nbsp;&nbsp;&nbsp;Hobbies</h3>
             <ul>
-                Hobbies
                 <li>Hiking</li>
                 <li>Reading</li>
                 <li>Board games</li>
             </ul>
-            <ul>
-                Places I'd like to go
+            <h3 class="list-header">Places I'd like to go</h3>
+            <ol>
                 <li>India</li>
                 <li>Brazil</li>
                 <li>Peru</li>
-            </ul>
+            </ol>
         </section>
-        <button onclick="">place
-            Take quiz
-        </button>
         <section class="quiz-results">
-            quiz results here
+            <h3>Take a quiz about Evan!</h3>
+            <p class="hidden">quiz results here</p>
+            <button onclick="">
+                    Take quiz
+            </button>
         </section>
     </main>
     <script src="./src/app.js" type="module"></script>
