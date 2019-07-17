@@ -12,29 +12,54 @@ const actual = Math.floor(Math.random() * 20 + 1);
 
 let triesLeft = 5;
 
+//UI work functions
+//Decrementing tries
+function decrementTries() {
+    triesLeft --;
+    tries.textContent = triesLeft;
+}
+//Display of too low message
+function displayLow() {
+    high.classList.add('hidden');
+    low.classList.remove('hidden');
+}
+//Display of too high message
+function displayHigh() {
+    high.classList.remove('hidden');
+    low.classList.add('hidden');
+}
+//Disable game play
+function disableButton() {
+    guessButton.disabled = true;
+}
+//Display of lose game
+function displayLose() {
+    high.classList.add('hidden');
+    low.classList.add('hidden');
+    lose.classList.remove('hidden');
+}
+//Display of win game
+function displayWin() {
+    win.classList.remove('hidden');
+    high.classList.add('hidden');
+    low.classList.add('hidden');
+}
+
 guessButton.addEventListener('click', () => {
-    let guess = Number(numberInput.value)
+    let guess = Number(numberInput.value);
     let result = compareNumbers(guess, actual);
     if(result === 0) {
-        win.classList.remove('hidden');
-        high.classList.add('hidden');
-        low.classList.add('hidden');
-        guessButton.disabled = true;
+        displayWin();
+        disableButton();
     } else if(result === -1) {
-        high.classList.add('hidden');
-        low.classList.remove('hidden');
-        triesLeft --;
-        tries.textContent = triesLeft;
+        displayLow();
+        decrementTries();
     } else if(result === 1) {
-        high.classList.remove('hidden');
-        low.classList.add('hidden');
-        triesLeft --;
-        tries.textContent = triesLeft;
+        displayHigh();
+        decrementTries();
     }
     if(triesLeft === 0) {
-        high.classList.add('hidden');
-        low.classList.add('hidden');
-        lose.classList.remove('hidden');
-        guessButton.disabled = true;
+        displayLose();
+        disableButton();
     }
 });
