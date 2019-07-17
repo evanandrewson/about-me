@@ -1,14 +1,40 @@
-import compareNumbers from 'compareNumbers.js';
+import compareNumbers from './compareNumbers.js';
 
-const guess = document.getElementById('number-input');
+const numberInput = document.getElementById('number-input');
 const guessButton = document.getElementById('guess-button');
 const high = document.getElementById('high');
 const low = document.getElementById('low');
 const win = document.getElementById('win');
 const lose = document.getElementById('lose');
+const tries = document.getElementById('tries-left');
+const actual = 3;
+
 
 let triesLeft = 5
 
 guessButton.addEventListener('click', () => {
-    console.log('button works');
+    let guess = Number(numberInput.value)
+    let result = compareNumbers(guess, actual);
+    if(result === 0) {
+        win.classList.remove('hidden');
+        high.classList.add('hidden');
+        low.classList.add('hidden');
+        guessButton.disabled = true;
+    } else if(result === -1) {
+        high.classList.add('hidden');
+        low.classList.remove('hidden');
+        triesLeft --;
+        tries.textContent = triesLeft;
+    } else if(result === 1) {
+        high.classList.remove('hidden');
+        low.classList.add('hidden');
+        triesLeft --;
+        tries.textContent = triesLeft;
+    }
+    if(triesLeft === 0) {
+        high.classList.add('hidden');
+        low.classList.add('hidden');
+        lose.classList.remove('hidden');
+        guessButton.disabled = true;
+    }
 });
