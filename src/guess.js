@@ -7,10 +7,10 @@ const low = document.getElementById('low');
 const win = document.getElementById('win');
 const lose = document.getElementById('lose');
 const tries = document.getElementById('tries-left');
-const actual = 3;
+// random number generator - credit to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+const actual = Math.floor(Math.random() * 20 + 1);
 
-
-let triesLeft = 5
+let triesLeft = 5;
 
 guessButton.addEventListener('click', () => {
     let guess = Number(numberInput.value)
