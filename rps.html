@@ -26,26 +26,26 @@
                 <li>Paper beats rock</li>
             </ul>
             <label>
-                <input type="radio" name="userInput" value="rock" checked>
+                <input type="radio" name="user-input" value="rock" id="rock" checked>
                 <img src="assets/rock.jpg" class="selector">
             </label>
             <label>
-                <input type="radio" name="userInput" value="paper">
+                <input type="radio" name="user-input" value="paper" id="paper">
                 <img src="assets/paper.jpg" class="selector">
             </label>
             <label>
-                <input type="radio" name="userInput" value="scissors">
+                <input type="radio" name="user-input" value="scissors" id="scissors">
                 <img src="assets/scissors.jpg" class="selector">
             </label>
             <br>
             <button id="throw-button">Throw</button>
-            <p id="computer-choice" class="invisible">
-                <img class="invisible" src="assets/rock.jpg">
+            <p>
+                <img id="computer-choice" class="invisible" src="assets/rock.jpg">
             </p>
             <p id="result">
                 <span id="message" class="hidden">result of game</span>
-                <span id="win-count">Wins:0</span>
-                <span id="loss-count">Losses:0</span>
+                <span id="win-count-display">Wins:0</span>
+                <span id="loss-count-display">Losses:0</span>
             </p>
         </section>
     </main>
