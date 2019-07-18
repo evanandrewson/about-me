@@ -1,4 +1,4 @@
-import getThrow from './getThrow.js';
+import getThrow, { ROCK, PAPER, SCISSORS } from './getThrow.js';
 
 const throwButton = document.getElementById('throw-button');
 const resultMessage = document.getElementById('message');
@@ -10,7 +10,7 @@ const moneyRemaining = document.getElementById('money-remaining');
 
 let winCount = 0;
 let lossCount = 0;
-let money= 10;
+let money = 10;
 
 function tieResult() {
     resultMessage.classList.remove('hidden');
@@ -41,7 +41,7 @@ throwButton.addEventListener('click', function() {
     //Max bet
     if(bet.value > money) {
         alert('You can\'t bet more than you have!');
-        return
+        return;
     }
 
     // Display computer throw
@@ -51,23 +51,23 @@ throwButton.addEventListener('click', function() {
     
     if(userThrow === computerThrow) {
         tieResult();
-    } else if(userThrow === 'rock' && computerThrow === 'scissors') {
+    } else if(userThrow === ROCK && computerThrow === SCISSORS) {
         winResult();
-    } else if(userThrow === 'rock' && computerThrow === 'paper') {
+    } else if(userThrow === ROCK && computerThrow === PAPER) {
         lossResult();
-    } else if(userThrow === 'paper' && computerThrow === 'rock') {
+    } else if(userThrow === PAPER && computerThrow === ROCK) {
         winResult();
-    } else if(userThrow === 'paper' && computerThrow === 'scissors') {
+    } else if(userThrow === PAPER && computerThrow === SCISSORS) {
         lossResult();
-    } else if(userThrow === 'scissors' && computerThrow === 'paper') {
+    } else if(userThrow === SCISSORS && computerThrow === PAPER) {
         winResult();
-    } else if(userThrow === 'scissors' && computerThrow === 'rock') {
+    } else if(userThrow === SCISSORS && computerThrow === ROCK) {
         lossResult();
     }
 
     // Disable game if out of money
     if(money === 0) {
         throwButton.disabled = true;
-        resultMessage.textContent = 'You lose and you\'re out of money! Refresh to play again.'
+        resultMessage.textContent = 'You lose and you\'re out of money! Refresh to play again.';
     }
 });

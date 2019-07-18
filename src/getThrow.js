@@ -1,10 +1,16 @@
+export const ROCK = 'rock';
+export const PAPER = 'paper';
+export const SCISSORS = 'scissors';
+
+
+
 export function getThrowFromNumber(number) {
     if(number === 0) {
-        return 'rock';
+        return ROCK;
     } else if(number === 1) {
-        return 'paper';
+        return PAPER;
     } else {
-        return 'scissors';
+        return SCISSORS;
     }
 }
 
