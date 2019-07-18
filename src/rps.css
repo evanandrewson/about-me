@@ -1,0 +1,46 @@
+.game {
+    background-color: #707E56;
+    border: 10px black solid;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+ul {
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#submit-button {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+img {
+    height: 200px;
+    margin: 10px;
+}
+
+input {
+    display: none;
+}
+
+.selector {
+    border: 5px solid transparent;
+}
+input:checked + .selector {
+    border: 5px solid black;
+}
+
+.invisible {
+    visibility: hidden;
+}

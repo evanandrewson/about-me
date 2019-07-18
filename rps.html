@@ -5,18 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="rps.css">
+    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/rps.css">
 </head>
 <body>
     <header>
-        <h1>About Evan Andrewson</h1>
+        <h1>Play Rock Paper Scissors!</h1>
         <nav>
             <a href="../">Home</a>
             <a href="guess.html">Guessing Game</a>
             <a href="rps.html">Rock Paper Scissors</a>
         </nav>
     </header>
+    <main>
+        <section class="game">
+            <ul> Rules
+                <br>
+                <li>Rock beats scissors</li>
+                <li>Scissors beats paper</li>
+                <li>Paper beats rock</li>
+            </ul>
+            <label>
+                <input type="radio" name="userInput" value="rock" checked>
+                <img src="assets/rock.jpg" class="selector">
+            </label>
+            <label>
+                <input type="radio" name="userInput" value="paper">
+                <img src="assets/paper.jpg" class="selector">
+            </label>
+            <label>
+                <input type="radio" name="userInput" value="scissors">
+                <img src="assets/scissors.jpg" class="selector">
+            </label>
+            <br>
+            <button id="throw-button">Throw</button>
+            <p id="computer-choice" class="invisible">
+                <img class="invisible" src="assets/rock.jpg">
+            </p>
+            <p id="result">
+                <span id="message" class="hidden">result of game</span>
+                <span id="win-count">Wins:0</span>
+                <span id="loss-count">Losses:0</span>
+            </p>
+        </section>
+    </main>
     <script src="./src/rps.js" type="module"></script>
 </body>
 </html>
