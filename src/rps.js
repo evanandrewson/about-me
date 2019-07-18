@@ -35,7 +35,6 @@ throwButton.addEventListener('click', function() {
     const src = 'assets/' + computerThrow + '.jpg';
     computerChoice.src = src;
 
-    console.log(userThrow, computerThrow);
     if(userThrow === computerThrow) {
         tieResult();
     } else if(userThrow === 'rock' && computerThrow === 'scissors') {

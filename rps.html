@@ -26,16 +26,24 @@
                 <li>Paper beats rock</li>
             </ul>
             <label>
-                <input type="radio" name="user-input" value="rock" id="rock" checked>
+                <input type="radio" name="user-input" value="rock" class="radio" checked>
                 <img src="assets/rock.jpg" class="selector">
             </label>
-            <label>
-                <input type="radio" name="user-input" value="paper" id="paper">
+            <label> 
+                <input type="radio" name="user-input" value="paper" class="radio">
                 <img src="assets/paper.jpg" class="selector">
             </label>
             <label>
-                <input type="radio" name="user-input" value="scissors" id="scissors">
+                <input type="radio" name="user-input" value="scissors" class="radio">
                 <img src="assets/scissors.jpg" class="selector">
+            </label>
+            <br>
+            <p>
+                <span id="money-remaining">Money remaining: $10</span>
+            </p>
+            <label>
+                Bet: 
+                <input type=number name="bet" max=10>
             </label>
             <br>
             <button id="throw-button">Throw</button>
