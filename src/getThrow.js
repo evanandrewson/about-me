@@ -7,3 +7,8 @@ export function getThrowFromNumber(number) {
         return 'scissors';
     }
 }
+
+export default function getThrow() {
+    const random = Math.floor(Math.random() * 3);
+    return getThrowFromNumber(random);
+}
