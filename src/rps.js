@@ -12,27 +12,6 @@ let winCount = 0;
 let lossCount = 0;
 let money = 10;
 
-function tieResult() {
-    resultMessage.classList.remove('hidden');
-    resultMessage.textContent = 'Tie game! Try again!';
-}
-function winResult() {
-    resultMessage.classList.remove('hidden');
-    resultMessage.textContent = 'You win!';
-    winCount++;
-    winCountDisplay.textContent = 'Wins: ' + winCount;
-    money += Number(bet.value);
-    moneyRemaining.textContent = 'Money remaining: $' + money;
-}
-function lossResult() {
-    resultMessage.classList.remove('hidden');
-    resultMessage.textContent = 'You lose!';
-    lossCount++;
-    lossCountDisplay.textContent = 'Losses: ' + lossCount;
-    money -= Number(bet.value);
-    moneyRemaining.textContent = 'Money remaining: $' + money;
-}
-
 throwButton.addEventListener('click', function() {
     const computerThrow = getThrow();
     const userChoice = document.querySelector('input:checked');
@@ -71,3 +50,24 @@ throwButton.addEventListener('click', function() {
         resultMessage.textContent = 'You lose and you\'re out of money! Refresh to play again.';
     }
 });
+
+function tieResult() {
+    resultMessage.classList.remove('hidden');
+    resultMessage.textContent = 'Tie game! Try again!';
+}
+function winResult() {
+    resultMessage.classList.remove('hidden');
+    resultMessage.textContent = 'You win!';
+    winCount++;
+    winCountDisplay.textContent = 'Wins: ' + winCount;
+    money += Number(bet.value);
+    moneyRemaining.textContent = 'Money remaining: $' + money;
+}
+function lossResult() {
+    resultMessage.classList.remove('hidden');
+    resultMessage.textContent = 'You lose!';
+    lossCount++;
+    lossCountDisplay.textContent = 'Losses: ' + lossCount;
+    money -= Number(bet.value);
+    moneyRemaining.textContent = 'Money remaining: $' + money;
+}
