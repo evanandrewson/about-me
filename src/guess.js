@@ -3,10 +3,6 @@ import compareNumbers from './compareNumbers.js';
 const numberInput = document.getElementById('number-input');
 const guessButton = document.getElementById('guess-button');
 const resultMessage = document.getElementById('result-message');
-const highMessage = document.getElementById('high-message');
-const lowMessage = document.getElementById('low-message');
-const winMessage = document.getElementById('win-message');
-const loseMessage = document.getElementById('lose-message');
 const triesMessage = document.getElementById('tries-left');
 // random number generator - credit to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const actual = Math.floor(Math.random() * 20 + 1);
