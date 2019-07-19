@@ -11,9 +11,10 @@ const moneyRemaining = document.getElementById('money-remaining');
 let winCount = 0;
 let lossCount = 0;
 let money = 10;
+let computerThrow;
 
 throwButton.addEventListener('click', function() {
-    const computerThrow = getThrow();
+    computerThrow = getThrow();
     const userChoice = document.querySelector('input:checked');
     const userThrow = userChoice.value;
 
@@ -24,23 +25,13 @@ throwButton.addEventListener('click', function() {
     }
 
     // Display computer throw
-    computerChoice.classList.remove('invisible');
-    const src = 'assets/' + computerThrow + '.jpg';
-    computerChoice.src = src;
+    displayComputerChoice();
     
     if(userThrow === computerThrow) {
         tieResult();
-    } else if(userThrow === ROCK && computerThrow === SCISSORS) {
+    } else if((userThrow === ROCK && computerThrow === SCISSORS) || (userThrow === PAPER && computerThrow === ROCK) || (userThrow === SCISSORS && computerThrow === PAPER)) {
         winResult();
-    } else if(userThrow === ROCK && computerThrow === PAPER) {
-        lossResult();
-    } else if(userThrow === PAPER && computerThrow === ROCK) {
-        winResult();
-    } else if(userThrow === PAPER && computerThrow === SCISSORS) {
-        lossResult();
-    } else if(userThrow === SCISSORS && computerThrow === PAPER) {
-        winResult();
-    } else if(userThrow === SCISSORS && computerThrow === ROCK) {
+    } else if((userThrow === ROCK && computerThrow === PAPER) || (userThrow === PAPER && computerThrow === SCISSORS) || (userThrow === SCISSORS && computerThrow === ROCK)) {
         lossResult();
     }
 
@@ -70,4 +61,10 @@ function lossResult() {
     lossCountDisplay.textContent = 'Losses: ' + lossCount;
     money -= Number(bet.value);
     moneyRemaining.textContent = 'Money remaining: $' + money;
+}
+
+function displayComputerChoice() {
+    computerChoice.classList.remove('invisible');
+    const src = 'assets/' + computerThrow + '.jpg';
+    computerChoice.src = src;
 }
