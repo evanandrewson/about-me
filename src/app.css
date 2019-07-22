@@ -3,43 +3,47 @@ img {
     width: 30%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
     border: 10px black solid;
 }
 
 .section1 {
     background-color: #9EB6AF;
     border: 10px black solid;
-    margin: 10px;
-    padding: 5px;
+    margin: 2rem;
+    padding: 2rem;
+    max-width: 95%;
 }
 
 .section2 {
     background-color: #707E56;
     border: 10px black solid;
-    margin: 10px;
-    padding: 5px;
+    margin: 2rem;
+    max-width: 95%;
+    padding: 2rem;
 }
 
 .section3 {
     background-color: #A69985;
     border: 10px black solid;
-    margin: 10px;
-    padding: 5px;
+    margin: 2rem;
+    max-width: 95%;
+    padding: 2rem;
 }
 .quiz-results {
     background-color: #707E56;
     border: 10px black solid;
-    margin: 10px;
-    padding: 5px;
+    margin: 2rem;
+    max-width: 95%;
+    padding: 2rem;
     text-align: center;
 }
 .lists {
     background-color: #9EB6AF;
     border: 10px black solid;
-    margin: 10px;
-    padding: 5px;
+    margin: 2rem;
+    max-width: 95%;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -49,5 +53,5 @@ ul, ol {
     margin-left: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 2rem;
 }
