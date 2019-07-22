@@ -1,0 +1,49 @@
+html {
+    margin: 4rem;
+    font-size: 2rem;
+}
+
+section {
+    margin: 2rem;
+}
+
+body {
+    background-color: #204758;
+}
+
+header {
+    background-color: #A69985;
+    border: 10px black solid;
+    margin: 2rem;
+    max-width: 95%;
+    padding: 2rem;
+    text-align: center;
+}
+
+h3, h1 {
+    text-align: center;
+    font-family: 'Barriecito', cursive;
+    font-size: 45px;
+}
+
+.hidden {
+    display: none;
+}
+
+p, li, ul, nav {
+    font-family: 'Squada One', cursive;
+}
+
+button {
+    background-color: #A69985;
+    font-family: 'Squada One', cursive;
+    font-size: 2rem;
+    height: 100px;
+    margin: 2rem;
+    width: 300px;
+}
+
+input {
+    height: 75px;
+    width: 100px;
+}
