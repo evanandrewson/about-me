@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/rps.css">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito|Squada+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Play Rock Paper Scissors!</h1>
+        <nav>
+            <a href="../">Home</a>
+            <a href="guess.html">Guessing Game</a>
+            <a href="rps.html">Rock Paper Scissors</a>
+        </nav>
+    </header>
+    <main>
+        <section class="game">
+            <ul> Rules
+                <br>
+                <li>Rock beats scissors</li>
+                <li>Scissors beats paper</li>
+                <li>Paper beats rock</li>
+            </ul>
+            <label>
+                <input type="radio" name="user-input" value="rock" class="radio" checked>
+                <img src="assets/rock.jpg" class="selector">
+            </label>
+            <label> 
+                <input type="radio" name="user-input" value="paper" class="radio">
+                <img src="assets/paper.jpg" class="selector">
+            </label>
+            <label>
+                <input type="radio" name="user-input" value="scissors" class="radio">
+                <img src="assets/scissors.jpg" class="selector">
+            </label>
+            <br>
+            <p>
+                <span id="money-remaining">Money remaining: $10</span>
+            </p>
+            <label>
+                Bet: 
+                <input type=number name="bet" id="bet">
+            </label>
+            <br>
+            <button id="throw-button">Throw</button>
+            <p>
+                <img id="computer-choice" class="invisible" src="assets/rock.jpg">
+            </p>
+            <p id="result">
+                <span id="message" class="hidden">result of game</span>
+                <span id="win-count-display">Wins:0</span>
+                <span id="loss-count-display">Losses:0</span>
+            </p>
+        </section>
+    </main>
+    <script src="./src/rps.js" type="module"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@
     <title>Guessing game</title>
     <link rel="stylesheet" href="src/main.css">
     <link rel="stylesheet" href="src/guess.css">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito|Squada+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -14,6 +15,7 @@
         <nav>
             <a href="../">Home</a>
             <a href="guess.html">Guessing Game</a>
+            <a href="rps.html">Rock Paper Scissors</a>
         </nav>
     </header>
     <main>
@@ -23,10 +25,7 @@
         number. The page will let you know if you've guessed too high or too low.
         </p>
         <p>Tries left: <span id="tries-left">5</span></p>
-        <p id="high" class="hidden">Too high!</p>
-        <p id="low" class="hidden">Too low!</p>
-        <p id="win" class="hidden">You win! Refresh the page to play again with a new number.</p>
-        <p id="lose" class="hidden">You lose. Refresh the page to play again with a new number</p>
+        <p class="hidden" id="result-message"></p>
         <label>
             Guess a number
             <input type="number" id="number-input" min=1 max=20>
